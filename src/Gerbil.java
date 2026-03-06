@@ -2,7 +2,14 @@
 in the constructor. Give it a method called hop( ) that displays which gerbil
 number this is, and that it’s hopping.
 Create an ArrayList and add Gerbil objects to the List.
-Now use the get( ) method to move through the List and call hop( ) for each Gerbil.*/
+Now use the get( ) method to move through the List and call hop( ) for each Gerbil.
+
+Exercise 8: (1) Modify Exercise 1 so it uses an Iterator to move through the List while calling hop( ).
+
+practice with lists and iterators
+*/
+
+
 
 import java.util.*;
 
@@ -29,8 +36,11 @@ public class Gerbil {
         gerbils.add(dinky);
         gerbils.add(grubs);
 
-        for (int i = 0; i < gerbils.size(); i++){
-           Gerbil current = gerbils.get(i);
+        // using an iterator
+        Iterator<Gerbil> it = gerbils.iterator();
+
+        while (it.hasNext()){
+           Gerbil current = it.next();
            current.hop();
         }
     }
