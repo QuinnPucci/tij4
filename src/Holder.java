@@ -6,9 +6,9 @@
 *  */
 
 public class Holder<T> {
-    T a;
-    T b;
-    T c;
+    private T a;
+    private T b;
+    private T c;
 
     public Holder(T a, T b, T c){
         this.a = a;
